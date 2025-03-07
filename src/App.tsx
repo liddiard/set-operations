@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Expression from './Expression'
 import './App.css'
 
 function App() {
@@ -41,12 +40,7 @@ function App() {
 
   return (
     <>
-      <input
-        name="expression"
-        placeholder="Expression"
-        value={expression}
-        onChange={(ev) => setExpression(ev.target.value)}
-      />
+      <Expression />
       {lists.map((list, idx) => 
         <div 
           className="list"
